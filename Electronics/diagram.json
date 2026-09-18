@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "author": "mohd luqmaan",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-mini", "id": "bb1", "top": 238.6, "left": 439.2, "attrs": {} },
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 9.6, "left": 465.64, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -61.2,
+      "left": 301.4,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 140.4,
+      "left": 176.6,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 215.15,
+      "left": 201.6,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -13.2,
+      "left": 656.6,
+      "attrs": { "color": "green" }
+    },
+    { "type": "wokwi-led", "id": "led4", "top": 102, "left": 791, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 23.15,
+      "left": 710.4,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": 157.55,
+      "left": 816,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "chip-TB6612FNG",
+      "id": "r1",
+      "top": 76.9,
+      "left": 284.48,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "chip-TB6612FNG",
+      "id": "r6",
+      "top": 86.5,
+      "left": 639.68,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": 3.95,
+      "left": 355.2,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": 63.6,
+      "left": 819.8,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led6",
+      "top": 82.8,
+      "left": 215,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led7",
+      "top": -61.2,
+      "left": 359,
+      "attrs": { "color": "red", "flip": "1" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led8",
+      "top": -51.6,
+      "left": 743,
+      "attrs": { "color": "red", "flip": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "led2:A", "r2:1", "green", [ "v0" ] ],
+    [ "led3:A", "r3:1", "green", [ "v0" ] ],
+    [ "r4:1", "led4:A", "green", [ "v-9.6", "h-28.8" ] ],
+    [ "esp:GND.2", "bb1:15t.a", "black", [ "v0", "h28.8" ] ],
+    [ "r1:GND", "bb1:1t.a", "black", [ "v0", "h38.4", "v192" ] ],
+    [ "r1:PWMA", "esp:13", "green", [ "v0" ] ],
+    [ "r1:AIN1", "esp:12", "blue", [ "v0" ] ],
+    [ "r1:AIN2", "esp:14", "blue", [ "v0" ] ],
+    [ "r1:PWMB", "esp:25", "green", [ "v21.01", "h115.2", "v-67.2" ] ],
+    [ "r1:BIN1", "esp:26", "yellow", [ "v30.61", "h105.6", "v-67.2", "h28.8" ] ],
+    [ "r1:BIN2", "esp:27", "yellow", [ "v40.21", "h76.8", "v-67.2" ] ],
+    [ "r6:GND1", "bb1:16t.a", "black", [ "v0", "h-67.2" ] ],
+    [ "r6:PWMA", "esp:18", "green", [ "v11.41", "h-153.6", "v-76.8" ] ],
+    [ "r6:AIN1", "esp:17", "orange", [ "v30.61", "h-96", "v-76.8" ] ],
+    [ "r6:PWMB", "esp:19", "green", [ "v-7.79", "h-28.8", "v-67.2" ] ],
+    [ "r6:BIN1", "esp:16", "violet", [ "v40.21", "h-57.6", "v-76.8" ] ],
+    [ "r6:BIN2", "esp:4", "violet", [ "v49.81", "h-57.6", "v-76.8" ] ],
+    [ "r5:1", "led1:A", "green", [ "v-19.2", "h76.8" ] ],
+    [ "r1:AO1", "r5:2", "green", [ "v-28.8", "h-46.8" ] ],
+    [ "led1:C", "r1:AO2", "green", [ "h0.4", "v19.2", "h28.8" ] ],
+    [ "r1:BO2", "led2:C", "green", [ "v-28.8", "h-163.2", "v144" ] ],
+    [ "r2:2", "r1:BO1", "green", [ "v-163.2", "h66" ] ],
+    [ "r6:AO1", "r3:2", "green", [ "v-38.4", "h57.6" ] ],
+    [ "r6:AO2", "led3:C", "green", [ "v-38.4", "h-28.8" ] ],
+    [ "r6:BO1", "r4:2", "green", [ "v-28.8", "h172.8", "v96", "h20.4" ] ],
+    [ "r6:BO2", "led4:C", "green", [ "v-9.6", "h96", "v76.8" ] ],
+    [ "r1:nSTBY", "esp:3V3", "cyan", [ "h-9.6", "v-94.19", "h115.2", "v-38.4" ] ],
+    [ "r1:VCC", "esp:5V", "red", [ "v-19.2", "h-76.8", "v172.8", "h9.6" ] ],
+    [ "r6:VCC", "esp:5V", "red", [ "v19.2", "h28.8", "v144", "h-278.55" ] ],
+    [ "r6:nSTBY", "esp:3V3", "cyan", [ "v-94.19", "h-96", "v-86.4", "h-134.55" ] ],
+    [ "led6:C", "r2:2", "green", [ "v76.8", "h28.8" ] ],
+    [ "led6:A", "r1:BO2", "green", [ "v0", "h-28.4", "v-96", "h134.4" ] ],
+    [ "led7:C", "r5:2", "green", [ "v9.6", "h28.8" ] ],
+    [ "led7:A", "r1:AO2", "green", [ "v48", "h-18.8" ] ],
+    [ "led8:A", "r6:AO2", "green", [ "v9.6", "h-57.2" ] ],
+    [ "led8:C", "r3:2", "green", [ "v0" ] ],
+    [ "led5:C", "r4:2", "green", [ "v0", "h38.4", "v57.6" ] ],
+    [ "led5:A", "r6:BO2", "green", [ "v0", "h-38", "v-48", "h-76.8" ] ],
+    [ "r6:AIN2", "esp:21", "orange", [ "v21.01", "h-115.2", "v-115.2" ] ]
+  ],
+  "dependencies": { "chip-l298n": "github:drf5n/Wokwi-Chip-L298N@1.0.5" }
+}
