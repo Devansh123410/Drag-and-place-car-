@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "mohd luqmaan",
+  "author": "Devansh Agrawal",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-breadboard-mini", "id": "bb1", "top": 238.6, "left": 439.2, "attrs": {} },
