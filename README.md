@@ -12,6 +12,7 @@ Virtual Prototype Testing: Fully simulated firmware and circuitry to ensure reli
 Design & CAD: Autodesk Fusion 360 (A custom build robotic car with the wheels and battery parts taken from grabcad.)
 * Check out my [Custom cad folder](./cad)
 Circuit Simulation: Wokwi (Virtual prototyping of the microcontroller, wireless modules, and motor drivers)
+*Check out my [Electronics Simulation](./firmware)
 Microcontroller/Firmware: C++/Arduino framework (or MicroPython, specify if used)
 Wireless Protocol: (e.g., Bluetooth / ESP-NOW / Wi-Fi / RF 433MHz)
 
