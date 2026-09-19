@@ -10,9 +10,11 @@ Virtual Prototype Testing: Fully simulated firmware and circuitry to ensure reli
 🛠️ Tech Stack & Resources3D 
 
 Design & CAD: Autodesk Fusion 360 (A custom build robotic car with the wheels and battery parts taken from grabcad.)
-* Check out my [Custom cad folder](./cad)
+* Check out my ![Custom cad folder](./cad)
+*  Also check out my images at ![images](./Images./Screenshot%202026-09-19%20082015.png)
 Circuit Simulation: Wokwi (Virtual prototyping of the microcontroller, wireless modules, and motor drivers)
-*Check out my [Electronics Simulation](./firmware)
+* Check out my ![Electronics Simulation](./firmware)
+* *  Also check out my images at ![images](./Images./Screenshot%202026-09-19%20081504.png)
 Microcontroller/Firmware: C++/Arduino framework (or MicroPython, specify if used)
 Wireless Protocol: (e.g., Bluetooth / ESP-NOW / Wi-Fi / RF 433MHz)
 
@@ -21,3 +23,4 @@ The overall project is licensed under the MIT License, excluding the following i
 * **Johnson Motor Model:** Sourced from (https://grabcad.com/library/johnson-geared-motor-200rpm-1) on GrabCAD.
 * **Wheel Model:** Sourced from (https://grabcad.com/library/precision-120mm-spiked-rubber-wheel-all-terrain-mobile-robot-tire-component-hassas-120mm-civili-kaucuk-tekerlek-ve-arazi-tipi-mobil-robot-lastik-bileseni-1) on GrabCAD.
 * **Lipo-Battery** Sourced from (https://grabcad.com/library/lipo-battery-6s-22-2v-5200msh-60c-1) on GrabCAD
+* **TB6612FNG Wokwi custom chips** The virtual custom chip for implementation of thee driver was created by David Forrest
