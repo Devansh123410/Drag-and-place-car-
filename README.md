@@ -15,7 +15,7 @@ Design & CAD: Autodesk Fusion 360 (A custom build robotic car with the wheels an
 Circuit Simulation: Wokwi (Virtual prototyping of the microcontroller, wireless modules, and motor drivers)
 * Check out my [Electronics Simulation](./firmware)
 * *  Also check out my images at [images](./Images./Screenshot%202026-09-19%20081504.png)
-Microcontroller/Firmware: C++/Arduino framework (or MicroPython, specify if used)
+Microcontroller/Firmware: ESP32(C++)
 Wireless Protocol: (e.g., Bluetooth / ESP-NOW / Wi-Fi / RF 433MHz)
 
 ## 📜 Credits & Third-Party Assets
